@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'details_page.dart';
-List<String> recipes = ["Chocolate Cake"];
+List<String> recipes = [
+  "Chocolate Cake",
+  "Carrot Cake",
+  "Fresh Strawberry Cake"
+];
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,12 +19,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text("Home Screen")),
       body: GridView.builder(
+        physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
         ),
         itemCount: recipes.length,
         itemBuilder: (context, index) {
-          return ElevatedButton(
+          return TextButton(
             child: Text(recipes[index]),
             onPressed: () {
               Navigator.push(
