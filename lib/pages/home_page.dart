@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recipebook/pages/details_page.dart';
+import 'details_page.dart';
+List<String> recipes = ["Chocolate Cake"];
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,8 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> recipes = ["Chocolate Cake", "Strawberry Cake"];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
